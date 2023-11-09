@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Cookies Example</title>
+</head>
+<body>
+
+    <h2>List Cookies Example</h2>
+
+    <script>
+        // Function to list cookies
+        function listCookies() {
+            // Get all cookies
+            const allCookies = document.cookie;
+
+            // Split cookies into an array
+            const cookieArray = allCookies.split('; ');
+
+            // Display each cookie
+            cookieArray.forEach(cookie => {
+                console.log(cookie);
+            });
+
+            // Alternatively, you can display the cookies in the browser window
+            // document.getElementById('cookieList').innerHTML = cookieArray.join('<br>');
+        }
+
+        // Call the function when the page is loaded (you can trigger this based on your requirements)
+        window.onload = listCookies;
+    </script>
+
+    <!-- You can create an element to display the cookie list in the browser window -->
+    <!-- <div id="cookieList"></div> -->
+
+</body>
+</html>
